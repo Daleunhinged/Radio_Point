@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- In-Cab Dark Mode Palette (Optimized for vibration and sunlight visibility) -->
+    <color name="bg_main">#0F172A</color>
+    <color name="bg_card">#1E293B</color>
+    <color name="bg_header">#1E293B</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#F8FAFC</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_muted">#64748B</color>
+    
+    <!-- Button Accents -->
+    <color name="ptt_chirp_red">#DC2626</color>
+    <color name="ptt_chirp_active">#991B1B</color>
+    <color name="btn_pullout_blue">#0284C7</color>
+    <color name="btn_status_empty">#059669</color>
+    <color name="btn_status_loaded">#D97706</color>
+    <color name="btn_status_pickup">#7C3AED</color>
+    <color name="btn_status_hazard">#E11D48</color>
+    <color name="btn_voice_active">#10B981</color>
+    <color name="btn_voice_inactive">#334155</color>
+    
+    <!-- Traffic Alert Colors -->
+    <color name="alert_border_red">#EF4444</color>
+    <color name="alert_header_pink">#FCA5A5</color>
+    <color name="alert_bg_dark">#18181B</color>
+    
+    <!-- Map Geometry Overlays -->
+    <color name="road_polyline">#38BDF8</color>
+    <color name="pullout_marker">#F59E0B</color>
+    <color name="meet_marker">#EF4444</color>
+    <color name="self_marker">#10B981</color>
+    <color name="remote_truck_marker">#F43F5E</color>
+</resources>

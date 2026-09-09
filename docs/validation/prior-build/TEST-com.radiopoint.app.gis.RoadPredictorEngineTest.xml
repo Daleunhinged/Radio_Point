@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.radiopoint.app.gis.RoadPredictorEngineTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-09-08T23:52:12" hostname="localhost" time="0.013">
+  <testcase name="divergingTrafficHasNoEncounter" classname="com.radiopoint.app.gis.RoadPredictorEngineTest" time="0.009" />
+  <testcase name="stoppedTrafficIsNotGivenInventedSpeed" classname="com.radiopoint.app.gis.RoadPredictorEngineTest" time="0.0" />
+  <testcase name="parallelTrafficHasNoEncounter" classname="com.radiopoint.app.gis.RoadPredictorEngineTest" time="0.0" />
+  <testcase name="approachingTraffic" classname="com.radiopoint.app.gis.RoadPredictorEngineTest" time="0.001" />
+  <testcase name="nearbyPulloutDoesNotMoveTheCalculatedEncounter" classname="com.radiopoint.app.gis.RoadPredictorEngineTest" time="0.001" />
+  <testcase name="utmRoundTrip" classname="com.radiopoint.app.gis.RoadPredictorEngineTest" time="0.0" />
+  </testsuite>

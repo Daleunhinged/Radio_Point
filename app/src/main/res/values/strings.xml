@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RadioPoint</string>
+    <string name="title_meet_predictor">MeetPredictor</string>
+    <string name="btn_chirp_location">CHIRP LOCATION (PTT)</string>
+    <string name="btn_mark_pullout">➕ MARK PULLOUT</string>
+    <string name="btn_status_empty">STATUS: EMPTY</string>
+    <string name="btn_status_loaded">STATUS: LOADED</string>
+    <string name="btn_status_pickup">STATUS: PICKUP</string>
+    <string name="btn_status_hazard">STATUS: HAZARD</string>
+    <string name="btn_voice_off">🔇 VOICE: OFF</string>
+    <string name="btn_voice_on">🔊 VOICE: ON</string>
+    <string name="select_road_dialog_title">Select Active Forest Service Road</string>
+    <string name="turnout_saved_toast">Turnout marked at KM %1$.2f on %2$s</string>
+</resources>

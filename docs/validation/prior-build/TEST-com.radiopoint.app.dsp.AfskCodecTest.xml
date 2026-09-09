@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.radiopoint.app.dsp.AfskCodecTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-09-08T23:52:12" hostname="localhost" time="0.119">
+  <testcase name="knownCrcVector" classname="com.radiopoint.app.dsp.AfskCodecTest" time="0.001" />
+  <testcase name="randomPayloadCorpus" classname="com.radiopoint.app.dsp.AfskCodecTest" time="0.073" />
+  <testcase name="actualWaveformDecodesAtEverySymbolOffset" classname="com.radiopoint.app.dsp.AfskCodecTest" time="0.025" />
+  <testcase name="attenuatedNoisyBandLimitedAudio" classname="com.radiopoint.app.dsp.AfskCodecTest" time="0.007" />
+  <testcase name="arbitraryChunkBoundariesPreserveHistory" classname="com.radiopoint.app.dsp.AfskCodecTest" time="0.005" />
+  <testcase name="allSingleBitCorruptionsFailChecksum" classname="com.radiopoint.app.dsp.AfskCodecTest" time="0.0" />
+  <testcase name="silenceAndNoiseDoNotCreatePositions" classname="com.radiopoint.app.dsp.AfskCodecTest" time="0.007" />
+  </testsuite>

@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.RadioPoint" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/ptt_chirp_red</item>
+        <item name="colorPrimaryVariant">@color/ptt_chirp_active</item>
+        <item name="colorOnPrimary">@color/text_primary</item>
+        
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/btn_pullout_blue</item>
+        <item name="colorSecondaryVariant">@color/btn_pullout_blue</item>
+        <item name="colorOnSecondary">@color/text_primary</item>
+        
+        <!-- Status bar & Window backgrounds. -->
+        <item name="android:statusBarColor">@color/bg_main</item>
+        <item name="android:windowBackground">@color/bg_main</item>
+        <item name="android:navigationBarColor">@color/bg_main</item>
+    </style>
+</resources>

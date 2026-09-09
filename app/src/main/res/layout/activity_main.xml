@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#101B1B">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:paddingHorizontal="16dp" android:paddingTop="10dp" android:orientation="horizontal">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="RADIOPOINT" android:letterSpacing="0.16" android:textSize="20sp" android:textStyle="bold" android:textColor="#EFF7EE" />
+        <Button android:id="@+id/btnSettings" android:layout_width="wrap_content" android:layout_height="48dp" android:text="UNIT —" android:textSize="12sp" android:backgroundTint="#243939" android:textColor="#D5E7DC" />
+    </LinearLayout>
+    <TextView android:id="@+id/txtRoadSelector" android:layout_width="match_parent" android:layout_height="48dp" android:paddingHorizontal="16dp" android:gravity="center_vertical" android:text="Select road or import a track ›" android:textColor="#D5E7DC" android:textSize="14sp" android:background="?attr/selectableItemBackground" android:clickable="true" android:focusable="true" />
+    <TextView android:id="@+id/txtLink" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="16dp" android:paddingVertical="8dp" android:text="Microphone off" android:textSize="12sp" android:textColor="#E8C687" android:background="#1C2D2B" />
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:minHeight="100dp">
+        <org.osmdroid.views.MapView android:id="@+id/mapView" android:layout_width="match_parent" android:layout_height="match_parent" />
+        <TextView android:id="@+id/txtCurrentKmBadge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="12dp" android:padding="10dp" android:background="#ED101B1B" android:text="Waiting for GPS" android:textColor="#EFF7EE" android:textSize="13sp" />
+        <TextView android:id="@+id/txtMapNote" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_gravity="bottom" android:padding="8dp" android:background="#ED101B1B" android:text="No reports does not mean the road is clear." android:textColor="#B7CABC" android:textSize="11sp" />
+    </FrameLayout>
+    <LinearLayout android:id="@+id/cardMeetHud" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp" android:background="#403320" android:visibility="gone">
+        <TextView android:id="@+id/txtAlertHeader" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#F0CB85" android:textSize="13sp" android:textStyle="bold" />
+        <TextView android:id="@+id/txtMeetDetails" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#FFF0D7" android:textSize="13sp" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingHorizontal="10dp">
+        <Button android:id="@+id/btnArm" android:layout_width="0dp" android:layout_weight="1" android:layout_height="52dp" android:text="ARM · 5 MIN" android:textSize="12sp" android:backgroundTint="#365B49" android:textColor="#F1F7EA" />
+        <Button android:id="@+id/btnCustomMaps" android:layout_width="0dp" android:layout_weight="1" android:layout_height="52dp" android:text="MAPS" android:textSize="12sp" android:layout_marginHorizontal="4dp" android:backgroundTint="#243939" android:textColor="#D5E7DC" />
+        <Button android:id="@+id/btnCrew" android:layout_width="0dp" android:layout_weight="1" android:layout_height="52dp" android:text="CREW · 0" android:textSize="12sp" android:backgroundTint="#243939" android:textColor="#D5E7DC" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingHorizontal="10dp">
+        <Button android:id="@+id/btnToggleLoadStatus" android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" android:text="EMPTY" android:textSize="12sp" android:backgroundTint="#243939" android:textColor="#D5E7DC" />
+        <Button android:id="@+id/btnDirection" android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" android:text="PARKED" android:textSize="12sp" android:layout_marginHorizontal="4dp" android:backgroundTint="#243939" android:textColor="#D5E7DC" />
+        <Button android:id="@+id/btnMarkPullout" android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" android:text="+ PULLOUT" android:textSize="11sp" android:backgroundTint="#243939" android:textColor="#D5E7DC" />
+    </LinearLayout>
+    <Button android:id="@+id/btnChirp" android:layout_width="match_parent" android:layout_height="68dp" android:layout_marginHorizontal="10dp" android:layout_marginBottom="6dp" android:text="CHIRP LOCATION" android:textSize="19sp" android:textStyle="bold" android:backgroundTint="#DBC18A" android:textColor="#14251D" />
+</LinearLayout>

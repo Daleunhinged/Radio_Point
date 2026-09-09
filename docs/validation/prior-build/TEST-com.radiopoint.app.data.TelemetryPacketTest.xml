@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="com.radiopoint.app.data.TelemetryPacketTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-09-08T23:52:12" hostname="localhost" time="0.045">
+  <testcase name="routeCodeStableAcrossLocale" classname="com.radiopoint.app.data.TelemetryPacketTest" time="0.013" />
+  <testcase name="invalidPayloadsAreRejected" classname="com.radiopoint.app.data.TelemetryPacketTest" time="0.029" />
+  <testcase name="invalidCoordinatesCannotTransmit" classname="com.radiopoint.app.data.TelemetryPacketTest" time="0.0" />
+  <testcase name="fullCoordinatesDoNotWrapOrLoseSign" classname="com.radiopoint.app.data.TelemetryPacketTest" time="0.001" />
+  </testsuite>
