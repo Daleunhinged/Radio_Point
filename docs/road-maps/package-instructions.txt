@@ -1,0 +1,62 @@
+RADIOPOINT — QUESNEL AREA ROAD MAPS
+
+Three offline raster maps: Nazko.mbtiles, Blackwater.mbtiles,
+Quesnel-Barkerville.mbtiles. These are regional road-reference maps, not
+turn-by-turn navigation or verified forestry access maps.
+
+INSTALL ON EACH PHONE
+1. Download and extract Quesnel-Road-Maps.zip.
+2. In RadioPoint, open MAPS and use the offline map archive import option.
+3. Select an individual .mbtiles file, then select the imported map.
+4. Pan to the relevant area. Detailed offline tiles cover zoom levels 8–14.
+   If the screen is blank when zoomed in very closely, zoom out.
+5. Turn off mobile data/Wi-Fi to check that the map displays offline.
+
+Do not import this whole delivery ZIP as a tile archive. Extract it first.
+No new APK is required. Actual import/display on your phones remains to be
+confirmed; the SQLite archives and PNG tile contents were checked locally.
+
+COVERAGE (approximate rectangular working areas, not official boundaries)
+Nazko: west -124.00, south 52.65, east -122.40, north 53.20.
+Blackwater: west -123.70, south 52.95, east -122.35, north 53.65.
+Quesnel–Barkerville: west -122.65, south 52.85, east -121.30, north 53.30.
+All three include Quesnel. The eastern map includes Wells and Barkerville.
+Tiles touching the outer boundary may contain incomplete surrounding data.
+
+MAP CONTENT
+Gold: main roads. White: local roads. Brown/grey: tracks and minor ways.
+Blue: mapped rivers and simple closed water polygons. Place/road labels
+appear where space permits. The background is a neutral colour: it does
+NOT classify vegetation, ownership, terrain or access rights.
+
+Source is OpenStreetMap, fetched through Overpass API. See manifest.json for
+source snapshot timestamps, feature counts, tile counts and SHA-256 hashes.
+These maps were rendered directly from geographic data. No public OSM tile
+server was scraped. GeoJSON source extracts are included for GIS use; they
+are NOT road-track files that the current RadioPoint importer can load.
+
+LIMITATIONS
+No terrain/elevation, contours, satellite imagery, live closures, forestry
+radio channels, posted kilometre calibration or verified bridge/road condition.
+OSM completeness varies, particularly on forestry spurs. Some mapped ways may
+be private, restricted, abandoned or impassable. Geometry does not establish
+permission or suitability to drive. Check current office maps and road notices.
+Complex water multipolygons were not included; lakes/rivers may be incomplete.
+
+These files supply the visible offline map. They do not select a continuous
+road track for encounter estimates. That separate GPX/KML route should be
+selected and reviewed for your actual project, then imported on both phones.
+Receiving crew chirps does not require a matching basemap or road track.
+
+ATTRIBUTION AND LICENCE
+Map data © OpenStreetMap contributors, available under ODbL 1.0:
+https://www.openstreetmap.org/copyright
+https://opendatacommons.org/licenses/odbl/1-0/
+Included GeoJSON extracts remain under ODbL. Keep this attribution and licence
+notice with copies. Raster map styling and rendering scripts may be reused
+under MIT; see LICENSE-renderer.txt. This map is not endorsed by OSM or Icom.
+
+BC Digital Road Atlas and Forest Tenure Road Section Lines are NOT included.
+Their catalogue metadata reported 'Access Only'; no redistribution permission
+was assumed. Office-provided data can be considered separately once its
+format and permitted use are established.

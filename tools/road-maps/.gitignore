@@ -1,0 +1,5 @@
+*.json
+!areas.json
+Quesnel-Road-Maps/
+__pycache__/
+.venv/

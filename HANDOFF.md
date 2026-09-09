@@ -8,6 +8,17 @@ The canonical repository is `Daleunhinged/Radio_Point`, branch `main`. This repo
 
 Migrated from `Daleunhinged/dale` branch `radiopoint-checkpoint`, source commit `126d5195b09c7db6bfc85ff4756418d00a1a0b51`. The old branch remains historical provenance; do not use it for ongoing development.
 
+## Latest user testing and road-map work (2026-09-09)
+
+Read [docs/road-maps/README.md](docs/road-maps/README.md) before map work. It contains the complete approach, sources/licensing, rebuild commands, original archive hashes, delivery location, known limitations and contribution tasks. Scripts are in tools/road-maps/.
+
+- Dale demonstrated phone-to-phone chirp reception in both directions; screenshots show CREW · 1 on each device. Lowering media volume resolved initial reception failure. Distortion is a plausible explanation, not a measured diagnosis.
+- Dale reports both phones received updates with screens off. These are user-reported spot checks, not measured decode-rate, battery or full-shift tests. One phone is Samsung; exact phone models/Android versions are not recorded.
+- Radios identified from labels: Icom IC-F5023H mobile and IC-F1000S handheld. Radio-link testing remains pending.
+- Delivered Nazko, Blackwater and Quesnel–Barkerville raster MBTiles. 11,783 tiles validated locally, zoom 8–14. Dale reports Blackwater import success but insufficient forestry detail.
+- **Next map target is C Road and its affiliated branches, not V Road.** Exact location remains unknown. Waiting for Dale's office project map or junction/coordinates. Do not guess the road.
+- No decoder, chirp amplitude or Android UI changes were made in response to these tests. No office map has been provided yet.
+
 ## Verified checkpoint
 
 GitHub Actions run [34311106552](https://github.com/Daleunhinged/dale/actions/runs/34311106552) succeeded against commit `d319f0ffe4986189502580df1e50b8e84702c794` on 2026-09-09. This includes the map/marker caching and 12-hour service session cap.

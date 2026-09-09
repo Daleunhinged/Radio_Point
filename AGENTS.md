@@ -1,6 +1,6 @@
 # RadioPoint agent instructions
 
-Read README.md, HANDOFF.md, and docs/FIELD-TEST.md before changing this project.
+Read README.md, HANDOFF.md, and docs/FIELD-TEST.md before changing this project. For road-map work, also read docs/road-maps/README.md; C Road's identity is still awaiting office source data.
 
 ## Scope and continuity
 - Canonical repository: `Daleunhinged/Radio_Point`, branch `main`. This root is the Android project. Use this repository for future development; the old `dale` checkpoint branch is historical only.

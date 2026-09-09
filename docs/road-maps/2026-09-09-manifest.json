@@ -1,0 +1,44 @@
+[
+  {
+    "area": "Nazko",
+    "bounds_wsen": [
+      -124.0,
+      52.65,
+      -122.4,
+      53.2
+    ],
+    "source_timestamp": "2026-09-09T05:59:50Z",
+    "features": 5115,
+    "tiles": 4293,
+    "bytes": 18788352,
+    "sha256": "cf8fa338117bf194f20800e4e706ca42ee470e719f3f7356752932b69c063698"
+  },
+  {
+    "area": "Blackwater",
+    "bounds_wsen": [
+      -123.7,
+      52.95,
+      -122.35,
+      53.65
+    ],
+    "source_timestamp": "2026-09-09T06:01:51Z",
+    "features": 5764,
+    "tiles": 4542,
+    "bytes": 20160512,
+    "sha256": "1f43c401cc7bd50ee93505d53ee6989cafc1cb3339f9c709444ca8b38d8ccdf3"
+  },
+  {
+    "area": "Quesnel-Barkerville",
+    "bounds_wsen": [
+      -122.65,
+      52.85,
+      -121.3,
+      53.3
+    ],
+    "source_timestamp": "2026-09-09T06:00:51Z",
+    "features": 4590,
+    "tiles": 2948,
+    "bytes": 13438976,
+    "sha256": "053dcee731e812ea93067f1ada9dbe84cacbc13db2a6e9f7991045484d7f8a76"
+  }
+]
