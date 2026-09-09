@@ -6,7 +6,8 @@ An Android app for exchanging GPS positions through the voice radios your crew a
 
 ## Install and try it
 
-Install `RadioPoint-2.0-fieldtest.apk` on both phones. This test app has a separate package ID (`com.radiopoint.app.fieldtest`) and can coexist with the original RadioPoint APK.
+For the on-foot feature, install the **2.1.0-fieldtest** APK on both phones
+from the matching successful GitHub Actions run. This test app has a separate package ID (`com.radiopoint.app.fieldtest`) and can coexist with the original RadioPoint APK.
 
 1. Assign different unit numbers (1–255) using the upper-right **UNIT** button.
 2. Tap **ARM** and grant precise location, microphone, and notification permissions. Wait for a fresh GPS fix. Sending requires a fix no older than 30 seconds and reported accuracy within 100 m.

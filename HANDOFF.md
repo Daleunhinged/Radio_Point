@@ -33,8 +33,18 @@ of arrival. UI/device and real-radio validation remain pending.
 Added FieldNavigation tests for bearings, date-line distance, uncertainty,
 invalid inputs and age, plus on-foot payload/PCM compatibility coverage.
 Version 2.1.0-fieldtest / code 3 retains the field-test application ID.
-At this source checkpoint CI test/build/lint is pending; temporary local
-Android SDK is absent. Do not treat the previous APK as including this feature.
+Verified source: 987a74069d2c9cbfb8729a5f2a111a46df84eeb0.
+GitHub Actions run https://github.com/Daleunhinged/Radio_Point/actions/runs/34362412684
+passed testDebugUnitTest, assembleDebug and lintDebug on 2026-09-09.
+All 29 tests passed (zero failures/errors/skips): navigation 5, on-foot radio 2,
+packet 4, codec 7, predictor 6, importer 5. Lint: 116 warnings, zero errors.
+APK SHA-256: b8594cc048a04ba3412e6598b7651e5941f1338f59394f909701fe504efe8e3c
+APK size: 7,042,443 bytes. Download artifact 10108586168 contains the exact APK
+and XML/lint reports; its archive expires 2026-10-09. Delivered filename:
+RadioPoint-2.1-fieldtest.apk. Hash verified against CI's SHA256SUMS.txt.
+The earlier b0fd2af build was superseded/cancelled, not a verified release.
+No emulator/UI or real-radio validation was performed; the local Android SDK
+is absent. Documentation-only follow-up commits do not change this APK.
 See README and docs/FIELD-TEST.md for operating instructions and manual checks.
 
 Road maps remain parked awaiting office data/permission. No road geometry
