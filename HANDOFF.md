@@ -8,6 +8,36 @@ The canonical repository is `Daleunhinged/Radio_Point`, branch `main`. This repo
 
 Migrated from `Daleunhinged/dale` branch `radiopoint-checkpoint`, source commit `126d5195b09c7db6bfc85ff4756418d00a1a0b51`. The old branch remains historical provenance; do not use it for ongoing development.
 
+## Joint-agent checkpoint — 2026-09-09
+
+Claude's four supplied files are now checkpointed under tools/road-maps/.
+They arrived as attachments; the local source snapshot had no Git metadata,
+so upstream main was read through GitHub and this commit preserves its tree.
+Dale/Claude should pull main before reconciling any local uncommitted copies.
+
+- Exact BC catalogue records rechecked: both Access Only; linked Copyright
+  policy requires written permission for reproduction. Internal crew GPX has
+  no stated exception. See LICENSING-NOTES.md for dated primary evidence.
+  No live geometry extraction, ranked candidates or C Road track generated.
+- Windows: discovery/projection use stdlib and py/full interpreter path.
+  Rendering and PNG validation run elsewhere on Linux with native dependencies
+  in requirements-render.txt. This is an execution split, not a pure-Python renderer.
+- Correction to Claude: discover_roads.py DOES request geometry (no propertyName
+  restriction), despite only printing attributes. Header corrected. Sibling
+  FTEN OGL evidence does not overturn exact-record Access Only metadata.
+- Locator review: vertex-only distance may miss crossings; greedy chaining and
+  increased tolerance do not establish a unique route; cap warnings are not
+  pagination. Resolve these and verify live fields before trusting candidates.
+- Projection stored-reference self-test: 7 passed, worst 0.000049 m; locator
+  --help passed with site packages disabled. No fresh pyproj comparison.
+  Claude's reported synthetic test suite was not attached; not rerun.
+  No Android changes/build, new radio tests, or new map rendering in this checkpoint.
+- Next: establish written permission covering exact layers and crew derivatives
+  (possibly already held by Dale's employer), or a verified suitable alternative.
+  Then fix/validate discovery completeness and distance logic, run live locator,
+  show candidates to Dale, await selection, and establish real posted KM 0.
+  Do not equate kilometres from either chain end with posted kilometres.
+
 ## Latest user testing and road-map work (2026-09-09)
 
 Read [docs/road-maps/README.md](docs/road-maps/README.md) before map work. It contains the complete approach, sources/licensing, rebuild commands, original archive hashes, delivery location, known limitations and contribution tasks. Scripts are in tools/road-maps/.
@@ -16,7 +46,7 @@ Read [docs/road-maps/README.md](docs/road-maps/README.md) before map work. It co
 - Dale reports both phones received updates with screens off. These are user-reported spot checks, not measured decode-rate, battery or full-shift tests. One phone is Samsung; exact phone models/Android versions are not recorded.
 - Radios identified from labels: Icom IC-F5023H mobile and IC-F1000S handheld. Radio-link testing remains pending.
 - Delivered Nazko, Blackwater and Quesnel–Barkerville raster MBTiles. 11,783 tiles validated locally, zoom 8–14. Dale reports Blackwater import success but insufficient forestry detail.
-- **Next map target is C Road and its affiliated branches, not V Road.** Exact location remains unknown. Waiting for Dale's office project map or junction/coordinates. Do not guess the road.
+- **Next map target is C Road and its affiliated branches, not V Road.** Dale reports a junction on Blackwater Road between posted km 40–50. Exact candidate remains unconfirmed. Do not guess the road.
 - No decoder, chirp amplitude or Android UI changes were made in response to these tests. No office map has been provided yet.
 
 ## Verified checkpoint

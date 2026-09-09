@@ -1,2 +1,2 @@
-Pillow==12.3.0
-shapely==2.1.2
+# Projection and discovery use Python's standard library; no pip packages.
+# Rendering/PNG validation run elsewhere; see requirements-render.txt and docs.

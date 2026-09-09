@@ -1,0 +1,3 @@
+# Linux rendering/PNG-validation environment only; native extensions required.
+Pillow==12.3.0
+shapely==2.1.2

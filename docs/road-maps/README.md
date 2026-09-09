@@ -14,8 +14,9 @@ forestry road detail. This does not establish complete archive rendering,
 all zoom levels, restart persistence or offline behavior on both phones.
 
 **Next target: C Road and its affiliated branches.** The user first said V Road,
-then corrected it to C Road. Its location has NOT been established. Dale will
-bring the original office project map, or a screenshot/junction/coordinates.
+then corrected it to C Road. Dale reports its junction on Blackwater Road at
+posted km 40–50. Exact identity remains unconfirmed; show candidates to Dale
+before creating any track.
 Do not guess its identity from the local name. Office software/file format is
 also unconfirmed (the user called it “mapwell”).
 
@@ -40,8 +41,13 @@ also unconfirmed (the user called it “mapwell”).
 BC Digital Road Atlas and Forest Tenure Road Section Lines were investigated
 but **not included**. The catalogue API returned `Access Only` and a BC terms
 URL for both records. An earlier conversational recommendation overstated their
-open-data status. Review actual terms before using or redistributing these
-layers; do not infer permission from public download access.
+open-data status. Rechecked 2026-09-09: both exact records still say Access Only.
+The linked BC Copyright policy requires written permission for reproduction,
+including no stated exception for internal crew GPX copies. Viewing records
+is distinct from extracting a reusable track. The licence gate remains closed
+for live geometry extraction pending applicable permission or a suitable licensed
+source. See [dated evidence and review](../../tools/road-maps/LICENSING-NOTES.md).
+Sibling FTEN records do not establish these exact layers' licences.
 
 Sources:
 - https://www.openstreetmap.org/copyright
@@ -56,14 +62,30 @@ geographic databases remain ODbL. The renderer's MIT licence does not license
 OSM or office data. Do not add proprietary office maps to Git without checking
 permitted use and the user's intended sharing scope.
 
-## Rebuild
+## Windows office tools and rendering elsewhere
+
+The projection and discovery scripts use only the standard library. Use `py`
+or `%LOCALAPPDATA%\\Programs\\Python\\Python312\\python.exe`; the office
+`python3` alias points at the Microsoft Store. No pip install is needed.
+`py tools/road-maps/bc_albers.py` runs the offline projection self-test.
+Live discovery remains subject to the licence gate above; discover_roads.py
+currently requests geometry too, although it only prints attributes.
+
+**Build and validate MBTiles on a permitted Linux machine/runtime elsewhere.**
+Shapely and Pillow both use native extensions; removing Shapely alone would
+not make the renderer compatible with the office DLL policy. Transfer the
+finished permitted map archives to the phones. No policy workaround or package
+reinstallation is required on the office PC. Renderer dependencies are isolated
+in requirements-render.txt; requirements.txt is dependency-free.
+
+## Rebuild (Linux rendering machine)
 
 From repository root (Python 3.12 used originally):
 
 ```sh
 python -m venv .venv
 . .venv/bin/activate
-python -m pip install -r tools/road-maps/requirements.txt
+python -m pip install -r tools/road-maps/requirements-render.txt
 python tools/road-maps/fetch.py
 # If Blackwater.json was not produced because of a timeout:
 python tools/road-maps/fetch_blackwater.py
@@ -124,3 +146,17 @@ original validated binary.
 
 Checkpoint each coherent change and update HANDOFF.md. Do not promise C Road
 coverage until its location and source geometry are verified.
+
+## C Road candidate review requirements
+
+User-reported discovery returned exactly 6000 features per layer, an arbitrary
+truncated subset: FTEN ROAD_SECTION_NAME=C and ROAD_SECTION_ID=C were seen,
+along with LOCATION=F Road (711 features), Quesnel (4967) and Prince George
+(1033). DRA ROAD_NAME_FULL=Blackwater Rd was seen. These are leads, not a
+complete search or a confirmed C Road. Verify fields and complete pagination
+before ranking. See licensing notes for locator algorithm limitations.
+
+Route kilometres start at the first vertex. Confirm and trim to real posted
+KM 0 before crew use; merely reversing a chain does not calibrate it, and
+matching KM 0 alone does not prove agreement at later posted markers. Check
+known posted landmarks too. No C Road GPX is approved or generated.
