@@ -1,2 +1,1 @@
-# Radio_Point
-Position reporting over VHF radio for single-lane forestry roads — AFSK chirps, offline maps, no cellular required. (126 chars)
+Android app for forestry crews to share GPS positions through two-way radio audio, view crew locations on maps, import road tracks, and estimate approaching vehicle encounters. Built for remote roads with limited cell service. Experimental; field testing underway.
