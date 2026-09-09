@@ -19,6 +19,9 @@ data class TelemetryPacket(
     val fixAgeSeconds: Int = 0,
     val sequence: Int = 0
 ) {
+    /** Keep v2 decoding compatible while removing vehicle-route participation. */
+    fun forOnFoot(): TelemetryPacket = copy(direction = Direction.PARKED, roadCode = 0)
+
     fun toPayloadBytes(): ByteArray {
         require(unitId in 1..255)
         require(latitude.isFinite() && latitude in -90.0..90.0)

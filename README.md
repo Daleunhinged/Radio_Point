@@ -16,6 +16,35 @@ Install `RadioPoint-2.0-fieldtest.apk` on both phones. This test app has a separ
 
 See [FIELD-TEST.md](docs/FIELD-TEST.md) for a practical test record.
 
+## Find crew and the truck on foot
+
+Tap **TRUCK MODE · SWITCH TO ON FOOT**. At the truck, tap **SAVE TRUCK** and
+confirm its parking location with a fresh GPS fix. **FIND TRUCK** selects that
+saved location; **FIND CREW** (or CREW) selects a received unit. The target panel
+updates distance and true-north bearing once per second and shows report age
+and GPS accuracy. Tap the panel to frame you and the target on the map.
+No road import, cell service, or matching basemap is needed for these calculations.
+Download an offline basemap in advance if you want map detail without connectivity.
+
+Each phone must save its own truck marker before walking away. The marker
+persists across restarts, records its save time, and does not follow or broadcast
+the truck. If someone remains with a moving truck, select that person's unit
+and ask them to send a new chirp. Crew targets update only on received reports;
+after 30 seconds they are labelled stale, and after 30 minutes guidance stops.
+Distance/bearing are to the last reported coordinates, not live tracking.
+
+Bearings are degrees from true north, not an arrow relative to the phone or a
+magnetic compass. Guidance is a straight line, not a traversable walking route.
+Bearing is withheld when the distance is within combined reported GPS accuracy;
+this is not proof of arrival. Your own stale/inaccurate GPS suppresses guidance.
+
+On-foot mode suppresses local vehicle encounter estimates and sends existing
+v2 PARKED/unknown direction with road code 0, preserving coordinate reception
+by older v2 phones. The existing vehicle-status field is retained; older phones
+do not show an ON FOOT label. Returning to truck mode resets direction to
+PARKED/unknown: select UP or DOWN explicitly. No audio/protocol framing changes.
+Radio PTT is still manual. Real Icom radio-link testing remains pending.
+
 ## Controls
 
 - **ARM / DISARM:** Opens or closes the microphone. The default session lasts five minutes and extends after each received position. Enable continuous mode in crew setup for a session up to 12 hours; stop it with DISARM or the notification action.

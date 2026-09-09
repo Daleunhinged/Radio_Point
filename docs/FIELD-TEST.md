@@ -25,3 +25,25 @@ When a chirp fails, record the setup before changing it. Change one thing at a t
 For route tests, import the exact same track on both phones. Confirm its first point, direction, and correspondence with local road signage. Set UP or DOWN explicitly. Test same-direction, opposing, and parked cases. A passing location must be agreed by voice and assessed on the ground; the app's encounter estimate is not an instruction to pass there.
 
 Known remaining validation: real radios, interference/signaling interactions, noisy cabs, GPS under canopy, Android manufacturer battery behavior, long listening sessions, and large real offline maps.
+
+## On-foot mode smoke checks (pending)
+
+- On two updated phones, choose distinct units, enter on-foot mode, and exchange
+  chirps in both directions. Select the other unit; confirm distance decreases
+  when walking toward its stationary reported position. Compare true bearings
+  with a reference set to true north (not magnetic). Repeat without a road import.
+- At the truck, SAVE TRUCK; cancel a replacement once to confirm the old pin
+  stays. Save on each phone, then walk away, restart the app, and FIND TRUCK.
+  Confirm marker time/accuracy and persistence, and that it stays put if the
+  truck moves. For a moving truck, select a reporting unit actually with it.
+- Withhold chirps: confirm stale label after 30 seconds and no target guidance
+  after 30 minutes. Disable GPS or deny permission: no fabricated guidance or
+  saved truck position. Saving must recheck GPS when confirmation is tapped.
+- Check same-position/overlapping-accuracy behavior: no reliable bearing or
+  claim of arrival. Confirm offline map display separately from coordinates.
+- With a real imported road, on-foot mode must suppress encounter estimates;
+  return to truck mode and verify direction is PARKED until explicitly changed.
+- Check small screen, landscape, large font, map target framing, labels,
+  permission denial/recovery, and recreation while a dialog is open.
+- Repeat screen-off reception and then the Icom IC-F5023H / IC-F1000S path with
+  phone pairs outside direct acoustic range. Record counts, not just success.

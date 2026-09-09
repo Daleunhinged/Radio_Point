@@ -8,6 +8,37 @@ The canonical repository is `Daleunhinged/Radio_Point`, branch `main`. This repo
 
 Migrated from `Daleunhinged/dale` branch `radiopoint-checkpoint`, source commit `126d5195b09c7db6bfc85ff4756418d00a1a0b51`. The old branch remains historical provenance; do not use it for ongoing development.
 
+## On-foot feature checkpoint — 2026-09-09
+
+Dale requested locating each other and the truck while outside the vehicle.
+Implemented persistent on-foot mode, per-phone saved truck parking pin,
+selectable received-unit target, straight-line distance/true bearing, target
+age/accuracy, and map framing. Crew selection now enters on-foot mode.
+Save-truck replacement is explicit and rechecks a fresh GPS fix on confirmation.
+Saved truck pins are local parking snapshots, not transmitted or live positions.
+For a moving truck, select a reporting unit that remains with it.
+
+No frame/frequency changes: forOnFoot() uses existing PARKED/unknown direction
+and route code 0, so old v2 decoders still accept positions and cannot generate
+road encounters from these reports. Vehicle-status nibble remains unchanged;
+there is no new remotely advertised ON FOOT status. Local encounter UI is
+suppressed on foot. Returning to truck resets direction to PARKED.
+
+Guidance is spherical straight-line distance, not a trail or phone-relative
+compass. Own stale GPS suppresses guidance; target reports >30 seconds are
+explicitly stale and >=30 minutes unavailable. Future receipt timestamps no
+longer masquerade as fresh. Accuracy overlap suppresses bearing, not proof
+of arrival. UI/device and real-radio validation remain pending.
+
+Added FieldNavigation tests for bearings, date-line distance, uncertainty,
+invalid inputs and age, plus on-foot payload/PCM compatibility coverage.
+At this source checkpoint CI test/build/lint is pending; temporary local
+Android SDK is absent. Do not treat the previous APK as including this feature.
+See README and docs/FIELD-TEST.md for operating instructions and manual checks.
+
+Road maps remain parked awaiting office data/permission. No road geometry
+or other agent's uploaded work was changed in this feature checkpoint.
+
 ## Joint-agent checkpoint — 2026-09-09
 
 Claude's four supplied files are now checkpointed under tools/road-maps/.
