@@ -13,7 +13,7 @@ Migrated from `Daleunhinged/dale` branch `radiopoint-checkpoint`, source commit 
 Dale requested locating each other and the truck while outside the vehicle.
 Implemented persistent on-foot mode, per-phone saved truck parking pin,
 selectable received-unit target, straight-line distance/true bearing, target
-age/accuracy, and map framing. Crew selection now enters on-foot mode.
+age/accuracy, and map framing. Truck-mode CREW keeps its existing report list; on-foot CREW selects a target.
 Save-truck replacement is explicit and rechecks a fresh GPS fix on confirmation.
 Saved truck pins are local parking snapshots, not transmitted or live positions.
 For a moving truck, select a reporting unit that remains with it.
@@ -32,6 +32,7 @@ of arrival. UI/device and real-radio validation remain pending.
 
 Added FieldNavigation tests for bearings, date-line distance, uncertainty,
 invalid inputs and age, plus on-foot payload/PCM compatibility coverage.
+Version 2.1.0-fieldtest / code 3 retains the field-test application ID.
 At this source checkpoint CI test/build/lint is pending; temporary local
 Android SDK is absent. Do not treat the previous APK as including this feature.
 See README and docs/FIELD-TEST.md for operating instructions and manual checks.

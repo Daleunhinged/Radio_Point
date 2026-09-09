@@ -25,7 +25,7 @@ class FieldNavigationTest {
         assertNull(g.bearingTrue)
     }
     @Test fun ageIncludesFixAgeAndRejectsFutureReceipts() {
-        assertEquals(40L,FieldNavigation.reportAgeSeconds(100000,70000,10))
+        assertEquals(40L,FieldNavigation.reportAgeSeconds(100000,70000,10)!!)
         assertNull(FieldNavigation.reportAgeSeconds(100000,100001,0))
         assertNull(FieldNavigation.reportAgeSeconds(100000,0,0))
     }

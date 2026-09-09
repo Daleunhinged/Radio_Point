@@ -194,7 +194,16 @@ class MainActivity:AppCompatActivity(),LocationListener {
             }
         }.show()
     }
-    private fun crew() { chooseFieldTarget() }
+    private fun crew() {
+        if(onFoot){chooseFieldTarget();return}
+        val rows=RadioState.positions.value.values.sortedBy {it.packet.unitId}
+        val description=if(rows.isEmpty())"No positions received. Absence of reports does not mean the road is clear."
+        else rows.joinToString("\n\n") {r->val p=r.packet;val age=age(r)
+            "Unit ${p.unitId} · ${p.status.label}\n${ageLabel(age)} · ±${p.accuracyMeters} m\n${fmt(p.latitude,6)}, ${fmt(p.longitude,6)}${if(p.roadCode!=roadManager.selectedRoad.roadCode)"\nDifferent route" else ""}"
+        }
+        AlertDialog.Builder(this).setTitle("Crew · last reported positions").setMessage(description)
+            .setPositiveButton("Close",null).setNeutralButton("Export KML"){_,_->export.launch("RadioPoint-crew.kml")}.show()
+    }
     private fun chooseFieldTarget() {
         val rows=RadioState.positions.value.values.filter {it.packet.unitId!=unit && age(it)<1800}.sortedBy {it.packet.unitId}
         val labels=listOf(if(truckPin()==null)"Saved truck · not marked yet" else "Saved truck · parking snapshot")+rows.map {r->

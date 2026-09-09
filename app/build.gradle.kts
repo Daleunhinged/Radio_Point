@@ -11,8 +11,8 @@ android {
         applicationId = "com.radiopoint.app"
         minSdk = 26
         targetSdk = 34
-        versionCode = 2
-        versionName = "2.0.0-fieldtest"
+        versionCode = 3
+        versionName = "2.1.0-fieldtest"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
